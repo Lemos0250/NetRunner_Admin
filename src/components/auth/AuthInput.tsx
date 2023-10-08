@@ -11,7 +11,7 @@ interface AuthInputProps {
 
 export default function AuthInput(props: AuthInputProps) {
     return props.naoRenderizarQuando? null :(
-        <div className="flex flex-col mt-3">
+        <div className="flex flex-col mt-3 text-hite">
             <label>{props.label}</label>
             <input
                 type={props.tipo ?? 'text'}
@@ -23,6 +23,7 @@ export default function AuthInput(props: AuthInputProps) {
                     bg-gray-200
                     border focus:border-blue-500
                     focus: outline-none focus:bg-white
+                    text-black
                 `}
             />
         </div>

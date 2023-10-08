@@ -1,4 +1,5 @@
-import { IconeMoon, IconeSun } from "../icons"
+import { IconeCyberpunkSun, IconeMoon, IconeSun } from "../icons"
+import Image from "next/image"
 
 interface BotaoAlternarTemaProps {
     tema: string | undefined
@@ -10,15 +11,15 @@ export default function BotaoAlternarTema(props: BotaoAlternarTemaProps) {
         <div onClick={props.alternarTema} className={`
         hidden sm:flex flex-row items-center cursor-pointer
         bg-gradient-to-r from-yellow-300 to-yellow-600
-        w-14 lg:w-24 h-8 p-1 rounded-full border gap-2
+        w-14 lg:w-24 h-8 p-1 rounded-full gap-2
         `}>
             
             <div className={`
                 flex items-center justify-center
                 bg-white text-yellow-600
-                w-6 h-6 border rounded-full
+                w-6 border rounded-full 
             `}>
-                {IconeSun(5)}
+                {IconeCyberpunkSun()}
             </div>
             <div className={`
             hidden lg:flex items-center

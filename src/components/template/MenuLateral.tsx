@@ -11,8 +11,10 @@ export default function MenuLateral() {
         `}>
             <div className={`
                 flex flex-col items-center justify-center
-                h-20 w-20
-                bg-gradient-to-r from-indigo-500 to-purple-800
+                h-20 w-20 
+                bg-gradient-to-r from-dark-800 to-slate-100
+                dark:border-white border-2 rounded-md
+                border-black border-2 rounded-md
             `}>
                 <Logo/>
             </div>
@@ -28,7 +30,7 @@ export default function MenuLateral() {
                     text-red-600 dark:text-red-400
                     hover:bg-red-400 hover:text-white
                     dark:hover:text-white
-                    `}
+                    `} 
                 />
             </ul>
         </aside>

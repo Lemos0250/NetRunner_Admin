@@ -1,4 +1,6 @@
 import useAppData from "@/data/hook/useAppData"
+import Image from "next/image"
+import Logo_Main from "../../../public/Logo.Main-removebg-preview.png"
 
 
 export default function Logo() {
@@ -7,13 +9,11 @@ export default function Logo() {
         <div className={`
         flex flex-col items-center justify-center
         h-12 w-12 rounded-full
-        bg-white
+        bg-[#FCEE09]
         `}>
 
-            <div className="h-3 w-3 rounded-full bg-red-600 mb-0.5"/>
-            <div className="flex mt-0.5">
-                <div className="h-3 w-3 rounded-full bg-yellow-500 mr-0.5"/>
-                <div className="h-3 w-3 rounded-full bg-green-600 ml-0.5"/>
+            <div>
+                <Image src={Logo_Main} alt="Logo" width={200} height={200}/>
             </div>
         </div>
     )

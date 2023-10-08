@@ -1,7 +1,9 @@
 import AuthInput from "@/components/auth/AuthInput"
 import { IconeWarning } from "@/components/icons"
 import { SetStateAction, useState } from "react"
-
+import Image from "next/image"
+import Fundo from '../../public/V_Cyberpunk.png'
+import Logo from '../../public/Logo.png'
 
 export default function Autenticacao() {
     const [email, setEmail] = useState('')
@@ -26,21 +28,23 @@ export default function Autenticacao() {
 
     return (
 
-    <div className="flex flex-rol h-screen items-center justify-center bg-white text-black">
+    <div className="flex flex-rol h-screen items-center justify-center bg-black text-white">
         
-        <div className="hidden md:block md:w-1/2 lg:w-2/3">
-            <img
-                src="https://source.unsplash.com/random"
-                alt="Imagem da Tela de Autenticação"
-                className="h-screen w-full object-cover"
-            />
+        <div className="hidden md:block md:w-1/2 lg:w-2/3 h-full">
+            <Image src={Fundo} alt="BackGround" width={1000} className="h-full object-cover"/>
         </div>
         
-        <div className="m-10 w-full md:w-1/2 lg:w-1/3">
+        <div className="m-10 mt-0 w-full md:w-1/2 lg:w-1/3">
+
+        <div className="flex items-center justify-center m-[5%]">
+            <Image src={Logo} alt="Logo" width={300} height={100}/>
+        </div>
+
             <h1 className={`
+            flex justify-center
             text-3xl font-bold mb-5
             `}>
-                {modo === 'login' ? 'Entre com a Sua Conta' : 'Cadastre-se na Plataforma'}
+                {modo === 'login' ? <a className="text-[#FCEE09] text-3xl">Bem Vindo NetRunner</a> : <a className="text-[#FCEE09] text-3xl">Cadastre-se na Plataforma</a>}
             </h1>
 
             {erro ? (
@@ -69,13 +73,19 @@ export default function Autenticacao() {
                 valorMudou={setSenha}
                 obrigatorio
             />
+
+            {modo === 'login' ? (
+            <div></div>
+        ) : (
             <AuthInput
-                label="Confiramação de Senha"
+                label="Confirmação de Senha"
                 tipo="email"
                 valor={email}
                 valorMudou={setEmail}
                 naoRenderizarQuando ={false}
             />
+        )
+        } 
 
             <button onClick={submeter} className={`
             w-full bg-indigo-500 hover:bg-indigo-400
@@ -94,22 +104,22 @@ export default function Autenticacao() {
             </button>
 
             {modo === 'login' ? (
-                <p className="">
-                    Novo por aqui ?
+                <p className="mt-[3%] flex justify-center">
+                    Não é de Night City ?...
                     <a onClick={() => setModo('cadastro')} className={`
-                    text-blue-500 hover-text-blue-700 font-semibold 
+                    text-[#00F0FF] hover-text-blue-700 font-semibold 
                     cursor-pointer
-                    `}> Crie uma Conta gratuitamente</a>
+                    `}>  Embarque na cidade</a>
                 </p>
 
             ) : (
 
-                <p className="">
-                    Já faz parte da nossa comunidade ?
+                <p className="mt-[3%] flex justify-center">
+                    Já Mora em Night City ?...
                     <a onClick={() => setModo('login')} className={`
                     text-blue-500 hover-text-blue-700 font-semibold 
                     cursor-pointer
-                    `}> Entre com a sua credenciais</a>
+                    `}> Então já entra </a>
                 </p>
             )}
         </div>
