@@ -1,11 +1,19 @@
-import AuthInput from "@/components/auth/AuthInput"
-import { IconeWarning } from "@/components/icons"
+import AuthInput from "../components/auth/AuthInput"
+import { IconeWarning } from "../components/icons"
 import { SetStateAction, useState } from "react"
 import Image from "next/image"
 import Fundo from '../../public/V_Cyberpunk.png'
 import Logo from '../../public/Logo.png'
+import useAuth from "../data/hook/useAuth"
 
 export default function Autenticacao() {
+    
+    const { usuario, loginGoogle} = useAuth()
+
+    async function loginGoogle() {
+        console.log('Login google...')
+    }
+    
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
     const [modo, setModo] = useState<'login' | 'cadastro'>('login')
