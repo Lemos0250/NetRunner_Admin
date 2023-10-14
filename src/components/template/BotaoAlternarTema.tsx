@@ -1,13 +1,13 @@
 import { IconeCyberpunkSun, IconeMoon, IconeSun } from "../icons"
-import Image from "next/image"
-
 interface BotaoAlternarTemaProps {
     tema: string | undefined
     alternarTema: (() => void) | undefined
 }
 
 export default function BotaoAlternarTema(props: BotaoAlternarTemaProps) {
+    
     return props.tema === 'dark' ? (
+
         <div onClick={props.alternarTema} className={`
         hidden sm:flex flex-row items-center cursor-pointer
         bg-gradient-to-r from-yellow-300 to-yellow-600

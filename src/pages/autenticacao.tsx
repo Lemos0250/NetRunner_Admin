@@ -10,9 +10,7 @@ export default function Autenticacao() {
     
     const { usuario, loginGoogle} = useAuth()
 
-    async function loginGoogle() {
-        console.log('Login google...')
-    }
+    
     
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -104,7 +102,7 @@ export default function Autenticacao() {
 
             <hr className="my-3 w-full border-gray-300 "></hr>
 
-            <button onClick={submeter} className={`
+            <button onClick={loginGoogle} className={`
             w-full bg-red-500 hover:bg-red-400
             text-white rounded-lg px-4 py-3 
             `}>
@@ -124,7 +122,7 @@ export default function Autenticacao() {
 
                 <p className="mt-[3%] flex justify-center">
                     Já Mora em Night City ?...
-                    <a onClick={() => setModo('login')} className={`
+                    <a onClick={() => setModo('login')}className={`
                     text-blue-500 hover-text-blue-700 font-semibold 
                     cursor-pointer
                     `}> Então já entra </a>

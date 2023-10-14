@@ -5,9 +5,9 @@ export default function Alertas() {
 
 
     return (
-        <Layout titulo="Alertas" 
-        subtitulo="Aqui você irá gerenciar as suas notificações">
-            <h1>Alertas</h1>
+        <Layout titulo="Perfil do Usuário" 
+        subtitulo="Administre as suas informações de usuário!">
+            <h1> Perfil do Usuário </h1>
         </Layout>
     )
 }     

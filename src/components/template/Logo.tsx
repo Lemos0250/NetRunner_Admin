@@ -1,4 +1,4 @@
-import useAppData from "@/data/hook/useAppData"
+import useAppData from "../../data/hook/useAppData"
 import Image from "next/image"
 import Logo_Main from "../../../public/Logo.Main-removebg-preview.png"
 
