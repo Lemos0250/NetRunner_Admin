@@ -12,8 +12,8 @@ export default function AvatarUsuario(props:AvatarUsuarioProps) {
     
     return (
         <Link href="/perfil">
-            <img 
-                src={usuario?.imagemUrl ?? '../../../public/V_image.jpg'} 
+            <Image 
+                src={usuario?.imagemUrl ?? '/V_image.jpg'} 
                 width={100} height={100}
                 alt="Avatar Usuário"
                 className={`h-10 w-10 rounded-full cursor-pointer
