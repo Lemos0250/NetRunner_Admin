@@ -81,6 +81,7 @@ export function AuthProvider(props) {
             setCarregando(false)
         }
     }
+    
 
     async function loginGoogle() {
         try {
