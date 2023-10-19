@@ -18,6 +18,7 @@ export default function BotaoAlternarTema(props: BotaoAlternarTemaProps) {
                 flex items-center justify-center
                 bg-white text-yellow-600
                 w-6 border rounded-full 
+                transition ease-in-out
             `}>
                 {IconeCyberpunkSun()}
             </div>
@@ -48,6 +49,7 @@ export default function BotaoAlternarTema(props: BotaoAlternarTemaProps) {
             flex items-center justify-center
             bg-black text-yellow-300
             w-6 h-6 border rounded-full
+            transition ease-in-out
             `}>
                 {IconeMoon(4)}
             </div>
