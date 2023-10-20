@@ -10,6 +10,8 @@ interface CabecalhoProps {
 
 export default function Cabecalho(props: CabecalhoProps) {
     const {tema, alternarTema} = useAppData()
+
+    console.log("ester-egg")
     
     return (
         <div className={`flex`}>
